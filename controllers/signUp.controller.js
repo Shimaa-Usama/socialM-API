@@ -35,10 +35,11 @@ module.exports = async(req, res) => {
                           });
                         
                         await userModel.insertMany({ fname, lname, uname, email, password:hash })
+                        res.json({messages: 'success'})
+
                     }
                 });
             }
-            res.json({messages: 'valid data'})
         }else{
             res.json({messages: 'invalid data', errorMessage: signUpErrors.errors})
         }
