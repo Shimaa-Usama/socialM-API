@@ -26,7 +26,7 @@ module.exports = async(req, res) => {
                               pass: "engshimaa4611", // generated ethereal password
                             },
                           });
-                          let info = await transporter.sendMail({
+                           await transporter.sendMail({
                             from: 'shimaa.usama99@gmail.com', // sender address
                             to: email, // list of receivers
                             subject: "Hello ✔", // Subject line
@@ -39,7 +39,6 @@ module.exports = async(req, res) => {
 
                     }
                 });
-            res.json({messages: 'valid data'})
 
             }
         }else{
