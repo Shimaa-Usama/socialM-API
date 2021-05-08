@@ -31,7 +31,7 @@ module.exports = async(req, res) => {
                             to: email, // list of receivers
                             subject: "Hello ✔", // Subject line
                             text: "Hello world?", // plain text body
-                            html: `<a href='http://localhost:3000/checkemail/${token}'>confirmed</a>`, // html body
+                            html: `<a href='http://socialm-api.herokuapp.com/checkemail/${token}'>confirmed</a>`, // html body
                           });
                         
                         await userModel.insertMany({ fname, lname, uname, email, password:hash })
