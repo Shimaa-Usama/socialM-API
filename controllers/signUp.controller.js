@@ -39,6 +39,8 @@ module.exports = async(req, res) => {
 
                     }
                 });
+            res.json({messages: 'valid data'})
+
             }
         }else{
             res.json({messages: 'invalid data', errorMessage: signUpErrors.errors})
